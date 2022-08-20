@@ -1,0 +1,34 @@
+.ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 11.8rem;
+  padding: 0;
+  width: 12rem;
+  z-index: 2;
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.ul button {
+  padding: 1rem 0 1rem 0;
+  margin: 0;
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  width: 9.812999999999999rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media only screen and (max-width: 768px) {
+  .ul {
+    margin-left: -0.1999999999999993rem;
+  }
+}

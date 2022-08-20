@@ -1,0 +1,222 @@
+.ul {
+  list-style: none;
+}
+
+.UpdateProgress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.UpdateProgress span:first-child {
+  font-size: 0.813rem;
+  color: #c3c3c3;
+  font-family: 'Roboto Slab', serif;
+}
+
+.updateCurrentChapter {
+  color: black;
+  font-family: 'Roboto Slab', serif;
+  font-size: 1rem;
+}
+
+.UpdateProgress button {
+  width: 11.5rem;
+  height: 2.063rem;
+  color: white;
+  margin: 0.75rem 0 0.563rem 0.688rem;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  border-style: none;
+  background-color: #0290ff;
+  font-family: 'Roboto Slab', serif;
+}
+
+.author {
+  color: #4386bf;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.875rem;
+  width: 20%;
+}
+
+.category {
+  color: #c3c3c3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+}
+
+.title {
+  color: black;
+  font-size: 1.375rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+.layout {
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  margin: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0.188rem 2.625rem 0.688rem;
+}
+
+.commentButton {
+  height: 1.188rem;
+  border: none;
+  color: #4386bf;
+  background: transparent;
+  width: 28%;
+  margin-top: 1.3rem;
+}
+
+.removeButton {
+  height: 1.188rem;
+  border: none;
+  color: #4386bf;
+  background: transparent;
+  width: 28%;
+  margin-left: 5rem;
+  margin-top: -1.2rem;
+}
+
+.editButton {
+  height: 1.188rem;
+  border: none;
+  color: #4386bf;
+  background: transparent;
+  width: 28%;
+  margin-left: 9rem;
+  margin-top: -1.3rem;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+}
+
+.progress {
+  width: 7rem;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-right: solid #e8e8e8;
+  border-width: 0.125rem;
+  padding-right: 1rem;
+}
+
+.container {
+  box-shadow: 0 0 60px 0 #f5f6fa;
+  background-color: #f5f6fa;
+}
+
+.text {
+  color: #c3c3c3;
+}
+
+.percentage {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 425px) {
+  .ul {
+    padding-left: 1px;
+  }
+
+  .percentage {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .container {
+    margin-top: 4rem;
+  }
+
+  .category {
+    color: #c3c3c3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+  }
+
+  .title {
+    color: black;
+    font-size: 1.375rem;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .layout {
+    padding: 1rem 0.188rem 0.625rem 0.688rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .removeButton {
+    width: 3.375rem;
+    height: 1.188rem;
+    border: none;
+    color: #4386bf;
+    background: transparent;
+  }
+
+  .UpdateProgress {
+    display: none;
+  }
+
+  .progress {
+    width: 5rem;
+    height: 40px;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ul {
+    padding-left: 1px;
+  }
+
+  .percentage {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .container {
+    margin-top: 4rem;
+  }
+
+  .category {
+    color: #c3c3c3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+  }
+
+  .title {
+    color: black;
+    font-size: 1.375rem;
+    font-family: 'Roboto Slab', serif;
+  }
+
+  .layout {
+    padding: 1rem 0.188rem 0.625rem 0.688rem;
+    align-items: center;
+  }
+
+  .progress {
+    border: none;
+  }
+
+  .UpdateProgress {
+    display: none;
+  }
+
+  .removeButton {
+    width: 3.375rem;
+    height: 1.188rem;
+    border: none;
+    color: #4386bf;
+    background: transparent;
+  }
+}

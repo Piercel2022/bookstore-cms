@@ -1,0 +1,192 @@
+.icon {
+  color: #c7c7c7;
+}
+
+.error {
+  color: red;
+  font-size: 10px;
+}
+
+.button {
+  color: #c7c7c7;
+  background: white;
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  padding: 1rem;
+  width: 9.812999999999999rem;
+  display: flex;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+  margin-left: 12rem;
+}
+
+.button:only-child {
+  margin-left: 1px;
+}
+
+input.input {
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  padding: 1rem;
+  width: 29.5rem;
+  height: 1rem;
+  margin-right: 2rem;
+  margin-left: 5rem;
+}
+
+.inputAuthor {
+  border: #e8e8e8 solid;
+  border-width: 0.5px;
+  padding: 1rem;
+  width: 15.5rem;
+  height: 1rem;
+  margin-left: 6rem;
+}
+
+.div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6rem;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 6rem;
+  width: 158%;
+}
+
+.h1 {
+  display: flex;
+  margin-left: 5.4rem;
+  color: rgba(136, 136, 136, 0.918);
+  font-size: 22px;
+  font-family: 'Montserrat', sans-serif;
+  width: 25%;
+}
+
+.container {
+  display: block;
+}
+
+.addBook {
+  color: white;
+  background-color: #0290ff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  height: 3.2rem;
+  margin-left: 250px;
+  padding: 1rem;
+  width: 11rem;
+}
+
+@media only screen and (max-width: 375px) {
+  .button {
+    margin-left: 0;
+  }
+
+  .form {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .div {
+    align-items: center;
+  }
+
+  .container {
+    margin-left: 1.25rem;
+  }
+
+  .input.input {
+    width: 13.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputAuthor {
+    width: 13.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .addBook {
+    margin: 54px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .button {
+    margin-left: 0;
+  }
+
+  .form {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .container {
+    margin-left: 1.25rem;
+    align-items: center;
+  }
+
+  .input.input {
+    width: 13.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputAuthor {
+    width: 13.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .addBook {
+    margin: 54px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 430px) {
+  .button {
+    margin-left: 0;
+  }
+
+  .form {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .container {
+    margin-left: 1.25rem;
+    align-items: center;
+  }
+
+  .input.input {
+    width: 15.5rem;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .inputAuthor {
+    width: 15.5rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  .addBook {
+    margin: 54px;
+  }
+}
