@@ -5,7 +5,7 @@ const fetchData = 'bookStore/books/fetchBooks';
 // const getCurrentBooks = 'GET_CURRENT_Books';
 
 const initialState = [];
-
+// Export Action Creators for the actions.
 export const addBook = (payload) => ({
   type: ADD_BOOK,
   payload,
@@ -22,7 +22,7 @@ export const getBooks = (payload) => ({
 });
 
 let flag = false;
-// books.js
+// Write your reducer and export it as default.
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
