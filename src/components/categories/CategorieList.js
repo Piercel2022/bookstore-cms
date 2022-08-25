@@ -1,12 +1,11 @@
 import PropTypes from 'prop-types';
-import classes from './CategorieList.module.css';
 
 function CategoriesList(props) {
   const { hide } = props;
   const { selectHandler } = props;
   return (
     <ul className={hide ? classes.ul : classes.hidden}>
-      <button type="button" name="Action" onClick={selectHandler}>Check Status</button>
+      <button type="button" name="Check Status" onClick={selectHandler}>Check Status</button>
     </ul>
   );
 }
