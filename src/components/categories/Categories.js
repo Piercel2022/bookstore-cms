@@ -1,9 +1,18 @@
-function Categories() {
-  return (
-    <div>
-      <p>Under construction</p>
-    </div>
-  );
-}
+const CHECK_STATUS = 'bookstore/categories/CHECK';
 
-export default Categories;
+const initialState = [];
+
+const checkReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case CHECK_STATUS:
+      return 'under construction';
+    default:
+      return state;
+  }
+};
+
+export const checkStatus = () => ({
+  type: CHECK_STATUS,
+});
+
+export default checkReducer;
