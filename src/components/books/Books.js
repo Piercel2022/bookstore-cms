@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import ProgressProvider from './ProgressProvider';
 import 'react-circular-progressbar/dist/styles.css';
 import classes from './Books.module.css';
-import AddnewBook from './AddnewBook';
 import { removeBook } from '../../redux/books/books';
 import store from '../../redux/configureStore';
 
@@ -40,10 +39,10 @@ function Books() {
           {(books.length !== 0) ? books.map((book) => (
             <div className={classes.layout} key={uuidv4()}>
               <li className={classes.book}>
-                <span className={classes.category}>{book[0].category}</span>
-                <span className={classes.title}>{book[0].title}</span>
+                <span className={classes.category}>{book.category}</span>
+                <span className={classes.title}>{book.title}</span>
                 {' '}
-                <span className={classes.author}>{book[0].author ? book[0].author : ''}</span>
+                <span className={classes.author}>{book.author ? book.author : ''}</span>
                 {' '}
                 <button className={classes.commentButton} type="button" onClick={() => commentHandler(book)}>Comments</button>
                 <button className={classes.removeButton} type="button" onClick={() => deleteHandler(book)}>Remove</button>
@@ -73,7 +72,6 @@ function Books() {
           )) : <li />}
         </ul>
       </form>
-      <AddnewBook />
     </div>
   );
 }
