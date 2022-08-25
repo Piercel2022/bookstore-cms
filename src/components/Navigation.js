@@ -38,7 +38,7 @@ function Navigation() {
     setcategoriesStyle({});
   };
 
-  const menuClickHnadler = () => {
+  const menuClickHandler = () => {
     setHideMenu(!hideMenu);
   };
   return (
@@ -46,7 +46,7 @@ function Navigation() {
       <ul className={classes.ul}>
         <Link to="/" onClick={logoClickHandle}><h2 className={classes.h2}>Bookstore CMS</h2></Link>
         <div className={classes.mobile}>
-          <FiMenu className={classes.hide} onClick={menuClickHnadler} />
+          <FiMenu className={classes.hide} onClick={menuClickHandler} />
         </div>
         <Link to="/" className={classes.desktopStuf} style={bookStyle} onClick={onClick}>Books</Link>
         <Link to="/Categories" className={classes.desktopStuf} style={categoriesStyle} onClick={onClick}>Categories</Link>
