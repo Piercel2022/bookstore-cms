@@ -1,16 +1,22 @@
+// Actions
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const fetchData = 'bookStore/books/fetchBooks';
-
-// const getCurrentBooks = 'GET_CURRENT_Books';
-
-const initialState = [];
-// Export Action Creators for the actions.
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
-  payload,
-});
-
+const initialState = [
+  {
+    bookTitle: 'THE HUNGER GAMES',
+    bookAuthor: 'Larem',
+    bookCategorie: 'Romance',
+    id: 1,
+  },
+  {
+    bookTitle: 'THE HUNGER GAMES',
+    bookAuthor: 'Larem',
+    bookCategorie: 'Romance',
+    id: 1,
+  },
+];
+// Remove Book Creator
 export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
   payload,
@@ -23,7 +29,7 @@ export const getBooks = (payload) => ({
 
 let flag = false;
 // Write your reducer and export it as default.
-const reducer = (state = initialState, action) => {
+const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
@@ -41,4 +47,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default booksReducer;
