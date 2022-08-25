@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import classes from './Books.module.css';
 
 function CategoriesList(props) {
   const { hide } = props;
