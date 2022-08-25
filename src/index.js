@@ -17,6 +17,7 @@ ReactDOM.render(
           path="/"
           exact
           element={(
+            // Import Redux Provider and the store in the main component of the app.
             <Provider store={store}>
               <Books />
 
