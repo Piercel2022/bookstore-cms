@@ -10,29 +10,30 @@ import store from './redux/configureStore';
 
 ReactDOM.render(
   <div className="container">
-    <BrowserRouter>
-      <Navigation />
-      <Routes>
-        <Route
-          path="/"
-          exact
-          element={(
+    <Provider store={store}>
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route
+            path="/"
+            exact
+            element={(
             // Import Redux Provider and the store in the main component of the app.
-            <Provider store={store}>
+
               <Books />
 
-            </Provider>
           )}
-        />
-        <Route
-          path="/Categories"
-          exact
-          element={
-            <Categories />
+          />
+          <Route
+            path="/Categories"
+            exact
+            element={
+              <Categories />
           }
-        />
-      </Routes>
-    </BrowserRouter>
+          />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </div>,
   document.getElementById('root'),
 );
