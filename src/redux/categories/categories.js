@@ -1,15 +1,20 @@
-const CHECK_STATUS = 'bookstore_cms/bookReducer/checkStatus';
+const addcategory = 'bookstore/categories/ADD_CATEGORY';
 
-export const checkStatus = () => ({
-  type: CHECK_STATUS,
+const UnderConstruction = 'Under_Construction';
+const initialState = [];
+
+// eslint-disable-next-line default-param-last
+const categoriesReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case addcategory:
+      return action.text;
+    default: return state;
+  }
+};
+
+export const addCategory = () => ({
+  type: addcategory,
+  text: UnderConstruction,
 });
 
-const initialState = '';
-export default function checkStatusReducer(state = initialState, action) {
-  switch (action.type) {
-    case CHECK_STATUS:
-      return 'Under Construction 🏗';
-    default:
-      return state;
-  }
-}
+export default categoriesReducer;
