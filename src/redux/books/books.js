@@ -1,50 +1,55 @@
-// Actions
-const ADD_BOOK = 'bookStore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
-const fetchData = 'bookStore/books/fetchBooks';
-const initialState = [
-  {
-    bookTitle: 'THE HUNGER GAMES',
-    bookAuthor: 'Larem',
-    bookCategorie: 'Romance',
-    id: 1,
-  },
-  {
-    bookTitle: 'THE HUNGER GAMES',
-    bookAuthor: 'Larem',
-    bookCategorie: 'Romance',
-    id: 1,
-  },
-];
-// Remove Book Creator
-export const removeBook = (payload) => ({
-  type: REMOVE_BOOK,
-  payload,
-});
+/* eslint-disable default-param-last */
+import { v4 as uuidv4 } from 'uuid';
 
-export const getBooks = (payload) => ({
-  type: fetchData,
-  payload,
-});
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-let flag = false;
-// Write your reducer and export it as default.
-const booksReducer = (state = initialState, action) => {
+const initialState = [{
+  title: 'THE HUNTER GAMES ',
+  author: 'Malbare',
+  id: uuidv4(),
+},
+{
+  title: 'MOVE TO CHICAGO ',
+  author: 'babaleo',
+  id: uuidv4(),
+},
+{
+  title: 'SEE YOU AGAIN',
+  author: 'Banard',
+  id: uuidv4(),
+},
+{
+  title: 'SANDLE',
+  author: 'reducle',
+  id: uuidv4(),
+}];
+
+const bookReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.payload];
+      return [
+        ...state,
+        action.content,
+      ];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
-    case fetchData:
-      if (!flag) {
-        flag = true;
-        return [...state, ...Object.entries(action.payload).map((el) => ({ ...el[1], id: `${el[0]}` }))];
-      }
-      return state;
-
-    default:
-      return state;
+      return state.filter((book) => (book.id !== action.id));
+    default: return state;
   }
 };
 
-export default booksReducer;
+export const addnewBook = (id, title, author) => ({
+  type: ADD_BOOK,
+  content: {
+    id,
+    title,
+    author,
+  },
+});
+
+export const removeBook = (id) => ({
+  type: REMOVE_BOOK,
+  id,
+});
+
+export default bookReducer;
