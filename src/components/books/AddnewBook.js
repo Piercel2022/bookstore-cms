@@ -1,6 +1,7 @@
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa';
 import { useState, useRef } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/books';
 import classes from './AddnewBook.module.css';
 import CategoriesList from '../categories/CategorieList';
 import store from '../../redux/configureStore';
@@ -17,7 +18,16 @@ function AddnewBook() {
   const onClick = () => {
     setHide(!hide);
   };
-  const addBook = () => { };
+  function addBook({ title, author, id }) {
+    const dispatch = useDispatch();
+    return (
+      <div className="book">
+        <p className="title">{title}</p>
+        <p>{author}</p>
+        <button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button>
+      </div>
+    );
+  }
   const onSubmit = (e) => {
     const title = bookTitle.current.value;
     const enteredCategorie = categorie;
