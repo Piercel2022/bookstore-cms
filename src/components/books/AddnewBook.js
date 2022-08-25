@@ -3,7 +3,6 @@ import { useState, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import classes from './AddnewBook.module.css';
 import CategoriesList from '../categories/CategorieList';
-import { addBook } from '../../redux/books/books';
 import store from '../../redux/configureStore';
 
 function AddnewBook() {
@@ -18,6 +17,7 @@ function AddnewBook() {
   const onClick = () => {
     setHide(!hide);
   };
+  const addBook = () => { };
   const onSubmit = (e) => {
     const title = bookTitle.current.value;
     const enteredCategorie = categorie;
