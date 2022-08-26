@@ -1,20 +1,16 @@
-const addcategory = 'bookstore/categories/ADD_CATEGORY';
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-const UnderConstruction = 'Under_Construction';
-const initialState = [];
+const categories = [];
 
-// eslint-disable-next-line default-param-last
-const categoriesReducer = (state = initialState, action) => {
+export default (state = categories, action) => {
   switch (action.type) {
-    case addcategory:
-      return action.text;
-    default: return state;
+    case CHECK_STATUS:
+      return 'Under construction';
+    default:
+      return state;
   }
 };
 
-export const addCategory = () => ({
-  type: addcategory,
-  text: UnderConstruction,
+export const checkBookStatus = () => ({
+  type: CHECK_STATUS,
 });
-
-export default categoriesReducer;
