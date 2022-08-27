@@ -23,8 +23,6 @@ cd bookstore-cms
 ```
 Finally A Linter for REACT & REDUX
 
-##Live Demo
-
 
 ### Install : 
 To create a React Application, follow these steps:
