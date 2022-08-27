@@ -1,5 +1,5 @@
 
-This project will lay foundations for your Bookstore website. You will create the React part of the app. You will also set up routing using React Router.
+This project add style the Bookstore website and is the last part of the project
 
 
 ## Built With
@@ -58,9 +58,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Zeplin design
+
 
 ## 📝 License
 
